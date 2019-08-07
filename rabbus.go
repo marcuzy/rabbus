@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	amqpWrap "github.com/rafaeljesus/rabbus/internal/amqp"
+	amqpWrap "github.com/marcuzy/rabbus/internal/amqp"
 
 	"github.com/rafaeljesus/retry-go"
 	"github.com/sony/gobreaker"
