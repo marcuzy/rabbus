@@ -54,6 +54,10 @@ type (
 		Headers map[string]interface{}
 		// ContentEncoding the message encoding.
 		ContentEncoding string
+		// MessageId the message id.
+		MessageId string
+		// ReplyTo the queue name you should reply to
+		ReplyTo string
 	}
 
 	// ListenConfig carries fields for listening messages.
@@ -314,6 +318,8 @@ func (r *Rabbus) produce(m Message) {
 		DeliveryMode:    m.DeliveryMode,
 		Timestamp:       time.Now(),
 		Body:            m.Payload,
+		ReplyTo:         m.ReplyTo,
+		MessageId:       m.MessageId,
 	}
 
 	if _, err := r.breaker.Execute(func() (interface{}, error) {
