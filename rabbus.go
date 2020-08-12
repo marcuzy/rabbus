@@ -283,7 +283,7 @@ func (r *Rabbus) Listen(c ListenConfig) (chan ConsumerMessage, error) {
 	return messages, nil
 }
 
-func (r *Rabbus) isConnected() bool {
+func (r *Rabbus) IsConnected() bool {
 	return r.connected
 }
 
