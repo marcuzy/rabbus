@@ -97,6 +97,7 @@ type (
 		exDeclared map[string]struct{}
 		config
 		conDeclared int // conDeclared is a counter for the declared consumers
+		connected bool
 	}
 
 	// AMQP exposes a interface for interacting with AMQP broker
@@ -204,6 +205,8 @@ func New(dsn string, options ...Option) (*Rabbus, error) {
 	r.config.dsn = dsn
 	r.breaker = gobreaker.NewCircuitBreaker(newBreakerSettings(r.config))
 
+	r.connected = true
+
 	return r, nil
 }
 
@@ -280,6 +283,10 @@ func (r *Rabbus) Listen(c ListenConfig) (chan ConsumerMessage, error) {
 	return messages, nil
 }
 
+func (r *Rabbus) isConnected() bool {
+	return r.connected
+}
+
 // Close channels and attempt to close channel and connection.
 func (r *Rabbus) Close() error {
 	err := r.AMQP.Close()
@@ -341,6 +348,8 @@ func (r *Rabbus) wrapMessage(c ListenConfig, sourceChan <-chan amqp.Delivery, ta
 }
 
 func (r *Rabbus) handleAMQPClose(err error) {
+	r.connected = false
+
 	for {
 		time.Sleep(time.Second)
 		aw, err := amqpWrap.New(r.config.dsn, r.config.isExchangePassive)
@@ -366,6 +375,8 @@ func (r *Rabbus) handleAMQPClose(err error) {
 		}
 		break
 	}
+
+	r.connected = true
 }
 
 func (r *Rabbus) listenReconnect(c ListenConfig, messages chan ConsumerMessage) {
