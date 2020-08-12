@@ -8,6 +8,10 @@ github.com/sony/gobreaker v0.0.0-20170530031423-e9556a45379e h1:A7yRSd+7ZYlgFchh
 github.com/sony/gobreaker v0.0.0-20170530031423-e9556a45379e/go.mod h1:XvpJiTD8NibaH7z0NzyfhR1+NQDtR9F/x92xheTwC9k=
 github.com/streadway/amqp v0.0.0-20171101222333-ff791c2d22d3 h1:qIyhhqB8VkGrFFxoFk3fWJavm55YQNFrf2qKr4cO7r4=
 github.com/streadway/amqp v0.0.0-20171101222333-ff791c2d22d3/go.mod h1:1WNBiOZtZQLpVAyu0iTduoJL9hEsMloAK5XWrtW0xdY=
+github.com/streadway/amqp v1.0.0 h1:kuuDrUJFZL1QYL9hUNuCxNObNzB0bV/ZG5jV3RWAQgo=
+github.com/streadway/amqp v1.0.0/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=
+github.com/streadway/amqp v1.0.1-0.20200716223359-e6b33f460591 h1:DY61wv7mWBLELSYAGfxjItovf7QQKxjLBSFldNbLS/Q=
+github.com/streadway/amqp v1.0.1-0.20200716223359-e6b33f460591/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd0=
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
