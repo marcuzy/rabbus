@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/rafaeljesus/rabbus"
+	"github.com/marcuzy/rabbus"
 )
 
 var (

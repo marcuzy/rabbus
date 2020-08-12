@@ -2,8 +2,6 @@ github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/rafaeljesus/rabbus v3.0.0+incompatible h1:bdBkwobMkLezjZiF5Gua2x2IS65IT+bsQNsE78lCEac=
-github.com/rafaeljesus/rabbus v3.0.0+incompatible/go.mod h1:4VW7Rbd9jT0qgqgJxd9gpuD/7gz8bvSzTneLeX54+Fk=
 github.com/rafaeljesus/retry-go v0.0.0-20170609161314-3bbade4f4fab h1:fRLzcFwGvsOp1OlQg4PSEbw/8smEEIe8vOnH/iLFNJQ=
 github.com/rafaeljesus/retry-go v0.0.0-20170609161314-3bbade4f4fab/go.mod h1:uve1vRfWBCIE8f4CrhS1UfYxdHnLMjpl6KOKA7IkH5g=
 github.com/sony/gobreaker v0.0.0-20170530031423-e9556a45379e h1:A7yRSd+7ZYlgFchh97XRpoDlDfHOmwG8rtajMkr7tEM=
