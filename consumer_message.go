@@ -52,6 +52,7 @@ func newConsumerMessage(m amqp.Delivery) ConsumerMessage {
 		DeliveryMode:    m.DeliveryMode,
 		Priority:        m.Priority,
 		CorrelationId:   m.CorrelationId,
+		MessageId: 		 m.MessageId,
 		ReplyTo:         m.ReplyTo,
 		Expiration:      m.Expiration,
 		Timestamp:       m.Timestamp,
