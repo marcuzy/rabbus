@@ -56,6 +56,8 @@ type (
 		ContentEncoding string
 		// MessageId the message id.
 		MessageId string
+		// CorrelationId the message correlation id
+		CorrelationId string
 		// ReplyTo the queue name you should reply to
 		ReplyTo string
 	}
@@ -97,7 +99,7 @@ type (
 		exDeclared map[string]struct{}
 		config
 		conDeclared int // conDeclared is a counter for the declared consumers
-		connected bool
+		connected   bool
 	}
 
 	// AMQP exposes a interface for interacting with AMQP broker
@@ -327,6 +329,7 @@ func (r *Rabbus) produce(m Message) {
 		Body:            m.Payload,
 		ReplyTo:         m.ReplyTo,
 		MessageId:       m.MessageId,
+		CorrelationId:   m.CorrelationId,
 	}
 
 	if _, err := r.breaker.Execute(func() (interface{}, error) {
