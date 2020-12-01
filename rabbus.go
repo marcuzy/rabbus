@@ -300,7 +300,7 @@ func (r *Rabbus) Close() error {
 }
 
 func (r *Rabbus) produce(m Message) {
-	if _, ok := r.exDeclared[m.Exchange]; !ok {
+	if _, ok := r.exDeclared[m.Exchange]; !ok && m.Exchange != "" {
 		if err := r.WithExchange(m.Exchange, m.Kind, r.config.durable); err != nil {
 			r.emitErr <- err
 			return
